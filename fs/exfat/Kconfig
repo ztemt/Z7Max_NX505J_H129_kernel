@@ -1,0 +1,26 @@
+config EXFAT_FS
+	tristate "EXFAT fs support"
+	help
+	  This option provides support for EXFAT file system.
+
+config EXFAT_DEFAULT_CODEPAGE
+	int "Default codepage for EXFAT"
+	depends on EXFAT_FS
+	default 437
+	help
+	  This option should be set to the codepage of your EXFAT filesystems.
+	  It can be overridden with the "codepage" mount option.
+
+config EXFAT_DEFAULT_IOCHARSET
+	string "Default iocharset for EXFAT"
+	depends on EXFAT_FS
+	default "utf8"
+	help
+	  Set this to the default input/output character set you'd
+	  like EXFAT to use. It should probably match the character set
+	  that most of your EXFAT filesystems use, and can be overridden
+	  with the "iocharset" mount option for EXFAT filesystems.
+
+	  Enable any character sets you need in File Systems/Native Language
+	  Support.
+

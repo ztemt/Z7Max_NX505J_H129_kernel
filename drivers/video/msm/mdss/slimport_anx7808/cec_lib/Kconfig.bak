@@ -1,0 +1,6 @@
+config SLIMPORT_CEC
+	bool "enable CEC feature via Slimport"
+	depends on 	SLIMPORT_ANX7808
+	help
+		The maximum charge current can be up to 1A via Slimport accessay,
+		 if this feature is enabled.
